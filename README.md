@@ -6,6 +6,11 @@ ___
 
 # Documentation
 
+Code and packages organization: 
+1. `api` is the web layer implemented by Spring Web
+2. `core` is the business model layer
+3. `application` is the high-level services for querying the data transfer objects
+4. `infrastructure`  contains all the implementation classes as the technique details
 ### Tech stack
 
 - Java 17
