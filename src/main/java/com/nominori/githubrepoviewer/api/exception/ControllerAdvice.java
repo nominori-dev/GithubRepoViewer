@@ -24,9 +24,14 @@ public class ControllerAdvice extends ResponseEntityExceptionHandler {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(ResourceNotFoundException.class)
     public ErrorResponse handleResourceNotFoundException(ResourceNotFoundException exception) {
-        return new ErrorResponse(exception.getMessage());
+        return new ErrorResponse(HttpStatus.NOT_FOUND.value(), exception.getMessage());
     }
 
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(RateLimitException.class)
+    public ErrorResponse handleRateLimitException(RateLimitException exception){
+        return new ErrorResponse(HttpStatus.BAD_REQUEST.value(), exception.getMessage());
+    }
 
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
