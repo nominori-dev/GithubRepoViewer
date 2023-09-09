@@ -34,12 +34,17 @@ cd GithubRepoViewer
 
 ./mvnw spring-boot:run
 ```
-
+Another way to run project is to clone using Intellij IDEA.
 By default project runs on port **8080**, to change this use -Dserver.port=XXXX
 ```bash
 ./mvnw spring-boot:run -Dserver.port=8090
 ```
 
+## Open API
+
+Default Open API specification - http://localhost:8080/v3/api-docs
+<br/>
+Default Swagger UI - http://localhost:8080/swagger-ui/index.html
 
 ## Authors
 
