@@ -1,6 +1,6 @@
 # GithubRepoViewer
 
-REST API for fetching Github User Repositories information. Project is based on 
+REST API for fetching Github Users Repositories information. Project is based on 
 public [Github REST API](https://docs.github.com/en/rest?apiVersion=2022-11-28).
 ___
 
