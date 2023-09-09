@@ -20,7 +20,7 @@ public class GithubRepositoryController {
     private final GhRepositoryQueryService ghRepositoryQueryService;
     private final GhRepositoryConverter converter;
 
-    @GetMapping
+    @GetMapping(produces = "application/json")
     public List<GithubRepository> getUserRepositories(@Valid GithubRepositoryQueryDto dto){
         return ghRepositoryQueryService.getUserRepositories(converter.dtoToParams(dto));
     }
