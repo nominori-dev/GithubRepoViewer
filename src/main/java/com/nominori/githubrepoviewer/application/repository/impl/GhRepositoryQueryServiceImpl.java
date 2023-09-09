@@ -45,6 +45,7 @@ public class GhRepositoryQueryServiceImpl implements GhRepositoryQueryService {
                 .map(ghRepo -> {
                     String repoUrl = getRepositoryUrl(params.getUser(), ghRepo.getName());
                     ghRepo.setBranches(branchesQueryService.getRepositoryBranches(repoUrl));
+                    ghRepo.setOwner(params.getUser().getLogin());
                     return ghRepo;
                 })
                 .toList();
